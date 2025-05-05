@@ -7,10 +7,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
 *.local
+
+# Next.js specific
+.next/
+out/
+build
+.vercel
+
+# Environment files
+.env
+.env*.local
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +33,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cache
+.cache
+.npm
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
