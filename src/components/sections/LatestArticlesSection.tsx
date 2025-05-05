@@ -60,11 +60,11 @@ export function LatestArticlesSection() {
   }
 
   return (
-    <section className="section bg-gray-50 dark:bg-gray-800">
+    <section className="section bg-gray-50 dark:bg-gray-800" id="latest-articles">
       <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-10 md:mb-16">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-600 dark:text-primary-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-primary-600 dark:text-primary-400">
               Articles & Éducation
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
@@ -72,14 +72,16 @@ export function LatestArticlesSection() {
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Button href="/articles" variant="outline">
-              Tous les articles <ArrowRight size={16} className="ml-2" />
+            <Button href="/articles" variant="outline" className="relative group">
+              <span>Tous les articles</span> 
+              <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              <span className="absolute -bottom-1 -right-1 bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs px-1.5 py-0.5 rounded-full hidden md:inline-block">Voir plus</span>
             </Button>
           </div>
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -88,38 +90,39 @@ export function LatestArticlesSection() {
           {articles.map((article) => (
             <motion.article
               key={article.id}
-              className="card overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="card overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               variants={itemVariants}
             >
-              <div className="relative h-48 w-full">
+              <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <span className="absolute bottom-4 left-4 bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <span className="absolute bottom-4 left-4 bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
                   {article.category}
                 </span>
               </div>
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <div className="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-2">
                   <span>{article.date}</span>
                   <span className="mx-2">•</span>
                   <span>{article.readTime} de lecture</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white line-clamp-2">
                   <Link href={`/articles/${article.id}`} className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                     {article.title}
                   </Link>
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm md:text-base">
                   {article.excerpt}
                 </p>
                 <div className="flex items-center">
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 bg-gray-300 dark:bg-gray-700">
-                    {/* This would be a profile image in a real application */}
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-300 font-bold text-xs">
+                    {article.author.split(' ').map(word => word[0]).join('')}
                   </div>
                   <span className="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                     {article.author}

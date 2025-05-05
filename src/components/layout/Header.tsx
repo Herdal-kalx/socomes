@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/Button'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 const navItems = [
-  { label: 'Accueil', href: '/' },
+  { label: 'Accueil', href: '/', isPrimary: true },
   { label: 'À Propos', href: '/a-propos' },
   { 
     label: 'Services', 
@@ -63,7 +63,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md' : 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -163,16 +163,33 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white dark:bg-gray-900 shadow-lg"
+            className="lg:hidden bg-white dark:bg-gray-900 shadow-lg overflow-y-auto max-h-[80vh]"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navItems.map((item) => (
+              {/* Toujours afficher l'accueil en premier et de manière proéminente sur mobile */}
+              <div className="mb-2 bg-primary-50 dark:bg-primary-900/30 rounded-lg">
+                <Link
+                  href="/"
+                  className={`flex items-center px-4 py-3 rounded-md text-base font-medium text-primary-700 dark:text-primary-300 ${pathname === '/' ? 'bg-primary-100 dark:bg-primary-800/40' : ''}`}
+                >
+                  <span className="mr-2 text-primary-600 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                      <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                  </span>
+                  Accueil
+                </Link>
+              </div>
+                            
+              {/* Autres éléments de navigation */}
+              {navItems.filter(item => item.href !== '/').map((item) => (
                 <div key={item.label}>
                   {item.children ? (
                     <>
                       <button
                         onClick={() => toggleDropdown(item.label)}
-                        className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                       >
                         {item.label}
                         <ChevronDown size={16} className={`transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
@@ -184,13 +201,16 @@ export default function Header() {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="pl-4 space-y-1"
+                            className="pl-4 space-y-1 border-l-2 border-primary-200 dark:border-primary-800 ml-3 mt-1"
                           >
                             {item.children.map((child) => (
                               <Link
                                 key={child.label}
                                 href={child.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === child.href
+                                  ? 'text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800'
+                                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                } transition-colors`}
                               >
                                 {child.label}
                               </Link>
@@ -202,11 +222,10 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium ${
-                        pathname === item.href
-                          ? 'text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
+                      className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === item.href
+                        ? 'text-primary-600 dark:text-primary-400 bg-gray-100 dark:bg-gray-800'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      } transition-colors`}
                     >
                       {item.label}
                     </Link>
@@ -214,8 +233,8 @@ export default function Header() {
                 </div>
               ))}
               
-              <div className="pt-4">
-                <Button href="/consultations" variant="primary" className="w-full">
+              <div className="pt-4 sticky bottom-0 bg-white dark:bg-gray-900 pb-2">
+                <Button href="/consultations" variant="primary" className="w-full shadow-md hover:shadow-lg transition-shadow">
                   Prendre Rendez-vous
                 </Button>
               </div>
