@@ -1,0 +1,10 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F9FAFB" />
+  <rect x="300" y="100" width="200" height="200" rx="100" fill="#D1D5DB" />
+  <rect x="340" y="160" width="120" height="80" rx="10" fill="#1666C0" />
+  <rect x="200" y="320" width="400" height="40" rx="5" fill="#266A93" />
+  <rect x="250" y="380" width="300" height="20" rx="5" fill="#D1D5DB" />
+  <rect x="300" y="420" width="200" height="20" rx="5" fill="#D1D5DB" />
+  <rect x="320" y="460" width="160" height="40" rx="5" fill="#1666C0" />
+  <text x="400" y="485" font-family="Arial" font-size="16" fill="white" text-anchor="middle">SOCOMES</text>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "/telemedecine/page": "app/telemedecine/page.js",
+  "/formations/page": "app/formations/page.js",
+  "/articles/page": "app/articles/page.js",
+  "/evenements/page": "app/evenements/page.js",
+  "/adhesion/page": "app/adhesion/page.js",
+  "/contact/page": "app/contact/page.js"
+}

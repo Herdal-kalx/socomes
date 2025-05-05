@@ -1,0 +1,12 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1666C0" />
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#gradient)" />
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1666C0;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0B3C5D;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <text x="960" y="540" font-family="Arial" font-size="64" fill="white" text-anchor="middle">SOCOMES</text>
+  <text x="960" y="620" font-family="Arial" font-size="32" fill="white" text-anchor="middle">Société Congolaise de Médecine Sexuelle</text>
+</svg>

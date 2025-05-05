@@ -1,0 +1,6 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#328CC1" />
+  <circle cx="600" cy="450" r="250" fill="#FFC300" opacity="0.6" />
+  <text x="600" y="460" font-family="Arial" font-size="48" fill="white" text-anchor="middle">Consultation</text>
+  <text x="600" y="520" font-family="Arial" font-size="28" fill="white" text-anchor="middle">Médecine Sexuelle</text>
+</svg>

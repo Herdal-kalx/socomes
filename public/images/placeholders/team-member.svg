@@ -1,0 +1,9 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#F9FAFB" />
+  <circle cx="400" cy="250" r="150" fill="#D1D5DB" />
+  <circle cx="400" cy="200" r="50" fill="#9CA3AF" />
+  <rect x="200" y="420" width="400" height="60" rx="5" fill="#1666C0" />
+  <rect x="250" y="500" width="300" height="40" rx="5" fill="#266A93" />
+  <rect x="300" y="560" width="200" height="30" rx="5" fill="#D1D5DB" />
+  <text x="400" y="460" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Membre SOCOMES</text>
+</svg>

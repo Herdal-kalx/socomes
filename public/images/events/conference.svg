@@ -1,0 +1,6 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0B3C5D" />
+  <polygon points="400,150 600,400 200,400" fill="#FFC300" opacity="0.8" />
+  <text x="400" y="310" font-family="Arial" font-size="32" fill="white" text-anchor="middle">Conférence</text>
+  <text x="400" y="350" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Dysfonctions Sexuelles</text>
+</svg>
