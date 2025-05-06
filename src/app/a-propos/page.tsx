@@ -10,28 +10,28 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Dr. Jean-Pierre Mulumba",
-      role: "Président & Fondateur",
+      name: "Dr. Eunice Bilonda",
+      role: "Neuropsychiatre MD.MPH.Phd st.",
       bio: "Spécialiste en médecine sexuelle avec plus de 20 ans d'expérience. Diplômé de l'Université de Kinshasa et formé à l'international.",
-      image: "/images/placeholders/team-member.svg"
+      image: "/images/placeholders/docteur (1).jpg"
     },
     {
-      name: "Dr. Marie Kenda",
-      role: "Vice-Présidente",
+      name: "Professeur Paul Musa",
+      role: "MD.PhD",
       bio: "Gynécologue spécialisée en santé reproductive. Chercheuse reconnue dans le domaine de la santé sexuelle féminine.",
-      image: "/images/placeholders/team-member.svg"
+      image: "/images/placeholders/docteur (2).jpg"
     },
     {
-      name: "Dr. Thomas Lusamba",
-      role: "Secrétaire Général",
+      name: "Dr. Georges kalenga",
+      role: "MD.MPH.PhD st.",
       bio: "Urologue et expert en médecine sexuelle masculine. Auteur de nombreuses publications scientifiques.",
-      image: "/images/placeholders/team-member.svg"
+      image: "/images/placeholders/docteur (3).jpg"
     },
     {
-      name: "Dr. Sylvie Mutombo",
-      role: "Responsable de la Formation",
+      name: "Dr. Vinie Mwanza",
+      role: "MD.MPH.PhD st.",
       bio: "Psychologue clinicienne spécialisée en thérapie sexuelle. Formatrice internationale en éducation sexuelle.",
-      image: "/images/placeholders/team-member.svg"
+      image: "/images/placeholders/docteur 4.jpg"
     }
   ]
 
@@ -120,7 +120,7 @@ export default function AboutPage() {
             
             <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
               <Image 
-                src="/images/placeholders/team.svg"
+                src="/images/placeholders/team.jpg"
                 alt="L'équipe de la SOCOMES en action" 
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

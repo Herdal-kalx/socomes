@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="order-1 lg:order-2 relative h-96 rounded-xl overflow-hidden shadow-xl">
               <Image 
-                src="/images/placeholders/team.svg"
+                src="/images/placeholders/team.jpg"
                 alt="Équipe médicale de SOCOMES" 
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

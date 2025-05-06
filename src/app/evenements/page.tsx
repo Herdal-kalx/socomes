@@ -31,7 +31,7 @@ export default function EventsPage() {
       time: "08:00 - 18:00",
       location: "Hôtel Pullman, Kinshasa",
       type: "congrès",
-      image: "/images/events/congress.jpg",
+      image: "/images/placeholders/Afro Art - Photos _ téléchargez gratuitement des images de haute qualité _ Freepik.jpeg",
       isFeatured: true
     },
     {
@@ -42,7 +42,7 @@ export default function EventsPage() {
       time: "09:00 - 16:00",
       location: "Centre médical SOCOMES, Kinshasa",
       type: "atelier",
-      image: "/images/events/workshop.jpg"
+      image: "/images/placeholders/Groupe de cinq hommes et femmes afro-américains souriants marchant dehors par temps nuageux près du lac, étudiants en échange en Russie _ Photo Premium.jpeg"
     },
     {
       id: '3',

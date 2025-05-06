@@ -85,31 +85,31 @@ export default function ConsultationsPage() {
   const specialists = [
     {
       id: 1,
-      name: "Dr. Antoine Mboyo",
+      name: "Dr. Eunice Bilonda",
       specialty: "Médecine Sexuelle Générale",
       category: "general",
-      image: "/images/placeholders/doctor.svg",
+      image: "/images/placeholders/docteur (1).jpg",
     },
     {
       id: 2,
-      name: "Dr. Claire Lukusa",
+      name: "Professeur Paul Musa",
       specialty: "Santé Reproductive",
       category: "reproductive",
-      image: "/images/placeholders/doctor.svg",
+      image: "/images/placeholders/docteur (2).jpg",
     },
     {
       id: 3,
-      name: "Dr. Patrick Mutombo",
+      name: "Dr. Georges kalenga",
       specialty: "Thérapie Sexuelle",
       category: "therapy",
-      image: "/images/placeholders/doctor.svg",
+      image: "/images/placeholders/docteur (3).jpg",
     },
     {
       id: 4,
-      name: "Dr. Sylvie Kalala",
+      name: "Dr. Vinie Mwanza",
       specialty: "Éducation Sexuelle",
       category: "education",
-      image: "/images/placeholders/doctor.svg",
+      image: "/images/placeholders/docteur 4.jpg",
     },
   ]
 

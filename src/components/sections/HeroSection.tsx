@@ -12,7 +12,7 @@ export function HeroSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/placeholders/hero.svg"
+          src="/images/placeholders/hero.jpg"
           alt="Healthcare professionals"
           fill
           sizes="100vw"
