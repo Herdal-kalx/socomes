@@ -4,11 +4,12 @@ import Image from 'next/image'
 
 interface LogoProps {
   variant?: 'default' | 'white'
+  linkDisabled?: boolean
 }
 
-export function Logo({ variant = 'default' }: LogoProps) {
-  return (
-    <Link href="/" className="flex items-center space-x-2">
+export function Logo({ variant = 'default', linkDisabled = false }: LogoProps) {
+  const content = (
+    <div className="flex items-center space-x-2">
       <div className={`flex items-center justify-center rounded-md text-white`}>
         <Image 
           src="/logo/Sans titre-1.png"
@@ -24,6 +25,16 @@ export function Logo({ variant = 'default' }: LogoProps) {
       }`}>
         SOCOMES
       </span>
+    </div>
+  )
+
+  if (linkDisabled) {
+    return content
+  }
+
+  return (
+    <Link href="/">
+      {content}
     </Link>
   )
 }
